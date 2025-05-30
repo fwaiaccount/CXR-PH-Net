@@ -7,6 +7,7 @@ import argparse
 import torch
 from torchvision.transforms import Compose, ToTensor
 from timm.models import create_model
+from utils import ImgNor_6
 
 
 def parse_args():
