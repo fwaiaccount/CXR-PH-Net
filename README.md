@@ -2,17 +2,14 @@
 
 - [Introduction](#introduction)
 - [Usage](#usage)
-- [Citing](#citing)
 - [Acknowledgement](#acknowledgement)
+- [References](#references)
 
 ## Introduction
- CXR-PH-Net and CXR-CHD-PAH-Net demonstrate high sensitivity as screening tools for PH and CHD-PAH, potentially facilitating early detection and triage for further evaluation, particularly in resource-limited settings. However, RHC remains essential for definitive diagnosis, and further validation in diverse populations is needed to confirm generalizability.
-
-![The CXR-PH-Net approach](figures/figure2.png)
-
+This reposity contains the code for the paper "Deep Learning-Enhanced Non-Invasive Detection of Pulmonary Hypertension and Subtypes via Chest Radiographs, Validated by Catheterization".
 ## Usage
-### 1. Install Instructions
-(Recommended) Install requirements, with Python 3.8 or higher, using pip3.
+### 1. Install
+Install requirements, with Python 3.8 or higher, using pip3.
 
 ```bash
 pip3 install -r requirements.txt
@@ -33,6 +30,8 @@ ${ROOT}/data
 |—— test.txt
 
 ```
+Please note that the dicom images and labels are indicative and not used in the paper.
+
 ### 3. Train
 #### Sample single-process running code:
 ```bash
@@ -49,7 +48,7 @@ python train.py /CXR-PH-Net/data \
     --input-size 3 1024 1024 \
     --output /CXR-PH-Net/results/ \
 ```
-### 3. Inference
+### 4. Inference
 We can run the following code, and the model prediction results will be saved in JSON format.
 ```bash
 python inference.py \
@@ -61,26 +60,23 @@ python inference.py \
     --save-path /CXR-PH-Net/results/test
 ```
 
-## Citing
 
-### BibTeX
-
-```bibtex
-@Article{2025,
-author={},
-title={Deep Learning-Enhanced Non-Invasive Detection of Pulmonary Hypertension and Subtypes via Chest Radiographs, Validated by Catheterization},
-journal={},
-year={2025},
-month={},
-day={},
-volume={},
-number={},
-pages={},
-doi={},
-url={https://doi.org/}
-}
-
-```
 ## Acknowledgement
-Thanks for the open-source:
-  https://github.com/huggingface/pytorch-image-models
+Our codebase heavily relies on [huggingface](https://github.com/huggingface/pytorch-image-models). Please check out their repo for more information, and consider citing them in addition to our manuscript if you use this codebase.
+```bibtex
+@misc{rw2019timm,
+  author = {Ross Wightman},
+  title = {PyTorch Image Models},
+  year = {2019},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  doi = {10.5281/zenodo.4414861},
+  howpublished = {\url{https://github.com/rwightman/pytorch-image-models}}
+}
+```
+## References
+- [VGG](https://arxiv.org/abs/1409.1556)
+- [ResNet](https://arxiv.org/abs/1512.03385)
+- [DenseNet](https://arxiv.org/abs/1608.06993)
+- [HRNet](https://arxiv.org/abs/1908.07919)
+- [ViT](https://arxiv.org/abs/2010.11929)
