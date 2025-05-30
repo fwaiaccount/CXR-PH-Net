@@ -17,8 +17,7 @@ pip3 install -r requirements-dev.txt
 ```
 
 ### 2. Prepare the dataset
-We have converted them into txt format,Extract them under {ROOT}/data, your directory tree should look like this:
-
+Put your CXR dicom images under {ROOT}/data.  Your directory tree should look like this:
 ```
 ${ROOT}/data
 ├── imgs
@@ -30,10 +29,12 @@ ${ROOT}/data
 |—— test.txt
 
 ```
-Please note that the dicom images and labels are indicative and not used in the paper.
+Please note that the dicom images and labels are examples and not used in the paper.
 
 ### 3. Train
-#### Sample single-process running code:
+
+Sample single-process running code:
+
 ```bash
 python train.py /CXR-PH-Net/data \
     --train_file train.txt \
@@ -49,7 +50,7 @@ python train.py /CXR-PH-Net/data \
     --output /CXR-PH-Net/results/ \
 ```
 ### 4. Inference
-We can run the following code, and the model prediction results will be saved in JSON format.
+Run the following code, and the model prediction results will be saved in JSON format.
 ```bash
 python inference.py \
     --data-dir /path/to/test/ \
