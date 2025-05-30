@@ -1,0 +1,7 @@
+torch>=2.0
+torchvision
+pyyaml
+huggingface_hub
+safetensors>=0.2
+numpy
+pydicom
