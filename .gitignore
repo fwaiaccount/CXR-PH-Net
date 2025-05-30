@@ -120,5 +120,7 @@ Testing notebook.ipynb
 /*.zip
 /*.tar.*
 
-#MAC
-.DS_Sore
+#macOS
+.DS_Store
+._.DS_Store
+*/.DS_Store
