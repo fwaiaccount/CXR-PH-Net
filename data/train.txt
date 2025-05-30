@@ -1,0 +1,4 @@
+###示例
+../CXR-PH-Net/data/imgs/0.dcm 0
+../CXR-PH-Net/data/imgs/1.dcm 1
+...
