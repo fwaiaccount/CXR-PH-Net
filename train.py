@@ -830,7 +830,7 @@ def main():
                 model_dtype=model_dtype,
                 model_ema=model_ema,
                 mixup_fn=mixup_fn,
-                num_updates_total=num_epochs * updates_per_epoch,
+                #num_updates_total=num_epochs * updates_per_epoch,
             )
 
             if args.distributed and args.dist_bn in ('broadcast', 'reduce'):

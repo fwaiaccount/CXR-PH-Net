@@ -1,6 +1,6 @@
 from .adabelief import AdaBelief
 from .adafactor import Adafactor
-from .adafactor_bv import AdafactorBigVision
+#from .adafactor_bv import AdafactorBigVision
 from .adahessian import Adahessian
 from .adamp import AdamP
 from .adamw import AdamWLegacy

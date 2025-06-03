@@ -37,8 +37,8 @@ Sample single-process running code:
 
 ```bash
 python train.py /CXR-PH-Net/data \
-    --train_file train.txt \
-    --val_file val.txt \
+    --train-file train.txt \
+    --val-file val.txt \
     --model vgg16 \
     --epochs 500 \
     --batch-size 24 \
